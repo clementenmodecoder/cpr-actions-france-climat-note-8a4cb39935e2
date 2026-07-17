@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Concurrence | CPR Actions France Climat</title>
+<link rel="stylesheet" href="styles.css?v=20260717">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="logobox"><img src="cpram-logo.jpg" alt="CPRAM"></span></a>
+    <nav>
+      <a href="index.html">Le fonds</a>
+      <a href="portefeuille.html">Portefeuille &amp; performance</a>
+      <a href="nouveautes.html">Nouveautés</a>
+      <a href="theme.html">Le thème</a>
+      <a href="enjeux.html">Enjeux climat</a>
+      <a href="strategie.html">Stratégie &amp; processus</a>
+      <a href="concurrence.html" class="active">Concurrence</a>
+    </nav>
+    <span class="badge-int">Usage interne</span>
+  </div>
+</header>
+
+<div class="phero">
+  <div class="wrap">
+    <div class="eyebrow">Concurrence</div>
+    <h1>Le fonds face à ses concurrents</h1>
+    <p class="lead">Comparaison du fonds avec les principales alternatives actives et passives sur les actions françaises à prisme climat / ESG&nbsp;: courbes de VL réelles, tableau comparatif, profils détaillés et lignes d'argumentation. L'analyse qualitative s'appuie sur l'étude concurrentielle fournie&nbsp;; les performances sont recalculées de façon homogène sur les VL publiques et exports fournis.</p>
+  </div>
+</div>
+
+<!-- GRAPHIQUE COMPARATIF -->
+<section id="graphique">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">01 · Courbes comparées</div>
+      <h2>VL du fonds et de ses concurrents, base 100</h2>
+      <p>Chaque courbe est indexée en base 100 au départ commun de la fenêtre affichée (dernière date de départ parmi les courbes visibles). Activer ou masquer les séries pour construire la comparaison utile au rendez-vous&nbsp;; les ETF sont masqués par défaut.</p>
+    </div>
+
+    <div class="panel">
+      <div class="ctrls">
+        <div class="ctrl-group">
+          <div class="glab">Période</div>
+          <div class="btnrow" id="rangeBtns"></div>
+        </div>
+        <div class="ctrl-group">
+          <div class="glab">Courbes (cliquer pour afficher / masquer)</div>
+          <div class="btnrow" id="seriesBtns"></div>
+        </div>
+      </div>
+
+      <div class="chartwrap">
+        <svg id="chart" xmlns="http://www.w3.org/2000/svg"></svg>
+        <div class="tip" id="tip"></div>
+        <div class="evttip" id="evtTip"></div>
+      </div>
+
+      <div class="livelegend" id="liveLegend" style="margin-top:14px"></div>
+
+      <div class="chart-foot">
+        <div class="base" id="baseNote"></div>
+        <div class="hint">Molette&nbsp;: zoom &nbsp;·&nbsp; glisser&nbsp;: déplacer &nbsp;·&nbsp; double-clic&nbsp;: réinitialiser</div>
+      </div>
+    </div>
+    <p class="srcline">Sources&nbsp;: exports de VL fournis (ETF BNPP et Amundi, Tocqueville France I, Ofi Invest Sélection Actions France I, Amundi Actions France Responsable I, au 13-16/07/2026) et données publiques Boursorama (fonds CPR, LBPAM Actions France C, SBF 120 prix). Courbe CPR&nbsp;: part I prolongée par la part P (C) rebasée après le 11/02/2026. Les parts diffèrent selon les fonds (I, C, GP)&nbsp;: les niveaux de frais ne sont donc pas strictement homogènes entre courbes. Performances nettes, dividendes le cas échéant non réinvestis pour les parts de distribution.</p>
+  </div>
+</section>
+
+<!-- TABLEAU COMPARATIF -->
+<section class="alt" id="tableau">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">02 · Tableau comparatif</div>
+      <h2>Classement par performance 2026</h2>
+      <p>Performances et volatilités recalculées de façon homogène sur les séries de VL au 13-16/07/2026 (YTD&nbsp;: depuis le 31/12/2025). Encours et frais&nbsp;: étude concurrentielle et documents officiels, à leurs dates respectives.</p>
+    </div>
+    <div class="card scroll-x">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Fonds</th>
+            <th>Gestion</th>
+            <th>SFDR</th>
+            <th class="num">Encours</th>
+            <th class="num">Frais courants</th>
+            <th class="num">2026 (YTD)</th>
+            <th class="num">1 an</th>
+            <th class="num">Volatilité<br><small>1 an</small></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>BNPP Easy Low Carbon 100 Europe PAB <small>(ETF, Europe)</small></td>
+            <td>Indiciel (ETF)</td><td>Art. 8</td>
+            <td class="num">~450 M€</td><td class="num">0,30 %</td>
+            <td class="num pos">+9,5 %</td><td class="num">+16,4 %</td><td class="num">12,9 %</td>
+          </tr>
+          <tr style="background:#eef7fd">
+            <td><b>CPR Actions France Climat</b> <small>(part I / P C)</small></td>
+            <td><b>Active · climat</b></td><td>Art. 8</td>
+            <td class="num">233 M€</td><td class="num">0,60 % + surperf.</td>
+            <td class="num pos"><b>+5,6 %</b></td><td class="num"><b>+9,6 %</b></td><td class="num">15,7 %</td>
+          </tr>
+          <tr>
+            <td>Amundi Actions France Responsable <small>(part IC)</small></td>
+            <td>Active · ESG</td><td>Art. 8</td>
+            <td class="num">~418-478 M€</td><td class="num">compétitifs (échelle groupe)</td>
+            <td class="num pos">+5,5 %</td><td class="num">+8,1 %</td><td class="num">14,6 %</td>
+          </tr>
+          <tr>
+            <td>Ofi Invest Sélection Actions France <small>(part I)</small></td>
+            <td>Active · ESG</td><td>Art. 8</td>
+            <td class="num">n.d.</td><td class="num">n.d.</td>
+            <td class="num pos">+4,0 %</td><td class="num">+7,9 %</td><td class="num">13,1 %</td>
+          </tr>
+          <tr>
+            <td>Tocqueville France ISR <small>(part I)</small></td>
+            <td>Active · value</td><td>Art. 8</td>
+            <td class="num">~233 M€</td><td class="num">n.d.</td>
+            <td class="num pos">+3,9 %</td><td class="num">+5,9 %</td><td class="num">14,4 %</td>
+          </tr>
+          <tr>
+            <td>LBPAM Actions France <small>(part C)</small></td>
+            <td>Active · ISR</td><td>Art. 8</td>
+            <td class="num">~222 M€</td><td class="num">n.d.</td>
+            <td class="num pos">+3,6 %</td><td class="num">+5,4 %</td><td class="num">14,4 %</td>
+          </tr>
+          <tr>
+            <td>BNPP Easy CAC 40 ESG <small>(ETF)</small></td>
+            <td>Indiciel (ETF)</td><td>Art. 8</td>
+            <td class="num">~213 M€</td><td class="num">0,25 %</td>
+            <td class="num pos">+3,3 %</td><td class="num">+5,7 %</td><td class="num">16,1 %</td>
+          </tr>
+          <tr>
+            <td>Amundi CAC 40 ESG <small>(UCITS ETF)</small></td>
+            <td>Indiciel (ETF)</td><td>Art. 8</td>
+            <td class="num">~828 M€</td><td class="num">0,25 %</td>
+            <td class="num pos">+3,0 %</td><td class="num">+8,9 %</td><td class="num">15,7 %</td>
+          </tr>
+          <tr>
+            <td>SBF 120 <small>(indice prix)</small></td>
+            <td>Indice de réf.</td><td>s.o.</td>
+            <td class="num">s.o.</td><td class="num">s.o.</td>
+            <td class="num">+2,8 %</td><td class="num">+8,0 %</td><td class="num">13,9 %</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="srcline">Performances et volatilités&nbsp;: calculs homogènes sur les VL des exports fournis et des données publiques Boursorama, arrêtés au 13-16/07/2026 selon les séries&nbsp;; volatilité&nbsp;: écart-type annualisé des rendements quotidiens sur 1 an. Encours et frais&nbsp;: recherche concurrentielle fonds climat (2026)&nbsp;; CPR&nbsp;: pitchbook (30/04/2026) et DIC PRIIPs part P. n.d.&nbsp;: non disponible dans les documents fournis. Le BNPP Easy Low Carbon 100 est paneuropéen (univers différent des fonds actions françaises).</p>
+    </div>
+
+    <div class="callout" style="margin-top:22px">
+      <p><b>Lecture commerciale.</b> En 2026, le fonds est <b>1er des fonds actions françaises comparés</b>, actifs comme ETF, et 2e toutes séries confondues derrière un ETF paneuropéen dont l'univers (Low Carbon 100 Europe) n'est pas comparable. Il fait environ le double de son indice (+5,6 % contre +2,8 %) tout en affichant l'engagement carbone le plus strict de la catégorie actions françaises (-20 % minimum, constaté à -44 %).</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROFILS ACTIFS -->
+<section id="actifs">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">03 · Les concurrents en gestion active</div>
+      <h2>Cinq alternatives actives, cinq philosophies</h2>
+      <p>Aucun acteur ne détient le modèle parfait&nbsp;: chaque philosophie implique des compromis (pureté climat, style, liquidité, impact social). Synthèse issue de l'étude concurrentielle fournie.</p>
+    </div>
+
+    <div class="grid2">
+      <div class="comp-card">
+        <div class="ctag">Gestion active · ESG holistique · intragroupe</div>
+        <h3>Amundi Actions France Responsable</h3>
+        <div class="isin">FR0010263491 · part IC · Amundi Asset Management</div>
+        <div class="crow"><span>Indice</span><b>SBF 120 (univers élargi MSCI EMU)</b></div>
+        <div class="crow"><span>SFDR</span><b>Article 8</b></div>
+        <div class="crow"><span>Encours</span><b>~418-478 M€</b></div>
+        <div class="crow"><span>2026 (YTD)</span><b>+5,5 %</b></div>
+        <p>Le concurrent intragroupe le plus direct, ex «&nbsp;Amundi Actions France ISR&nbsp;». Approche ESG holistique (mêmes notations A-G qu'Amundi / CPR) avec engagement actionnarial vigoureux, mais <b>sans contrainte quantitative stricte de réduction carbone</b>&nbsp;: plus de latitude sur les secteurs «&nbsp;bruns&nbsp;» en transition. Risque pour l'allocataire&nbsp;: une superposition (overlap) élevée avec le fonds CPR, qui les rend plus substituables que complémentaires. Le différenciant CPR&nbsp;: la trajectoire carbone contractuelle et la contribution Carbioz.</p>
+      </div>
+
+      <div class="comp-card">
+        <div class="ctag">Gestion active · ISR historique</div>
+        <h3>LBPAM Actions France</h3>
+        <div class="isin">FR0000003592 · part C · LBP AM (La Banque Postale)</div>
+        <div class="crow"><span>Indice</span><b>SBF 120</b></div>
+        <div class="crow"><span>SFDR</span><b>Article 8 · label ISR</b></div>
+        <div class="crow"><span>Encours</span><b>~222 M€</b></div>
+        <div class="crow"><span>2026 (YTD)</span><b>+3,6 %</b></div>
+        <p>Issu de la fusion-absorption de l'ancienne SICAV LBPAM ISR Actions France (octobre 2022). Intégration climat rigoureuse (empreinte scopes 1-2, feuille de route «&nbsp;Ambition 2050&nbsp;», Climate Action 100+), stratégie «&nbsp;best-in-universe&nbsp;» privilégiant le dialogue à l'exclusion. Profil de risque très mesuré (bêta ~1,01, tracking error contenue), mécanismes de swing pricing appréciés des institutionnels. Moins agressif que CPR sur les exclusions sectorielles directes.</p>
+      </div>
+
+      <div class="comp-card">
+        <div class="ctag">Gestion active · solidaire</div>
+        <h3>Ofi Invest Actions Solidaire France</h3>
+        <div class="isin">FR0000427452 · parts C/D · Ofi Invest AM (groupe Aéma)</div>
+        <div class="crow"><span>Indice</span><b>SBF 120 (dividendes nets réinvestis)</b></div>
+        <div class="crow"><span>SFDR</span><b>Article 8 · label Finansol</b></div>
+        <div class="crow"><span>Encours</span><b>~168-171 M€</b></div>
+        <div class="crow"><span>Gérants</span><b>O. Baduel &amp; F. Nakache</b></div>
+        <p>Modèle hybride unique&nbsp;: ESG + poche d'économie sociale et solidaire (jusqu'à ~10 % historiquement) et reversement d'une partie des frais en dons. Très attractif pour maximiser l'impact social direct, au prix d'une poche moins liquide et moins corrélée aux indices, susceptible de freiner la performance dans les marchés haussiers cycliques. Nota&nbsp;: la courbe Ofi du graphique correspond à un autre fonds de la gamme, <b>Ofi Invest Sélection Actions France</b> (FR0013422755, ex ESG Actions France), dont l'export de VL a été fourni.</p>
+      </div>
+
+      <div class="comp-card">
+        <div class="ctag">Gestion active · value / contrarian</div>
+        <h3>Tocqueville France ISR</h3>
+        <div class="isin">FR0010546960 · part C (courbe&nbsp;: part I) · La Financière de l'Échiquier</div>
+        <div class="crow"><span>Indice</span><b>SBF 120</b></div>
+        <div class="crow"><span>SFDR</span><b>Article 8 · label ISR</b></div>
+        <div class="crow"><span>Encours</span><b>~233 M€</b></div>
+        <div class="crow"><span>2026 (YTD)</span><b>+3,9 %</b></div>
+        <p>Pilier historique de la gestion actions françaises, éligible PEA, style <b>value / contrarian</b> assumé, à rebours du biais qualité-croissance des fonds climat. Exclusion des 20 % d'émetteurs les moins bien notés, reporting climat et biodiversité détaillé. Sa force&nbsp;: surperformer lors des rotations vers les secteurs décotés et cycliques&nbsp;; il agit comme couverture de style au sein d'une poche actions françaises ISR, avec une tracking error structurellement plus élevée.</p>
+      </div>
+
+      <div class="comp-card">
+        <div class="ctag">Gestion active · impact «&nbsp;solutions&nbsp;» · Europe</div>
+        <h3>Sycomore Europe Eco Solutions</h3>
+        <div class="isin">LU1183791794 · parts R/I · Sycomore Asset Management</div>
+        <div class="crow"><span>Indice</span><b>MSCI Europe (univers européen)</b></div>
+        <div class="crow"><span>SFDR</span><b>Article 9 · 1er label Greenfin</b></div>
+        <div class="crow"><span>Encours</span><b>~221 M€</b></div>
+        <div class="crow"><span>Style</span><b>Éco-solutions · biais sectoriels forts</b></div>
+        <p>Le stade ultime de l'approche «&nbsp;solutions&nbsp;»&nbsp;: uniquement des entreprises dont les revenus contribuent mesurablement à la transition (renouvelables, efficacité, eau, économie circulaire), sans banques traditionnelles ni pétrole. Performances spectaculaires dans les cycles favorables aux énergies propres (jusqu'à +24 % sur certaines années), mais biais sectoriels extrêmes&nbsp;: ce n'est pas un substitut au risque actions françaises global, plutôt un satellite «&nbsp;pur climat&nbsp;». Univers européen, non comparable strictement.</p>
+      </div>
+
+      <div class="comp-card" style="border:2px solid var(--cyan)">
+        <div class="ctag" style="color:var(--cyan)">Le positionnement CPR</div>
+        <h3>CPR Actions France Climat</h3>
+        <div class="isin">FR0013429974 (P C) · FR0011354638 (I) · CPR AM (groupe Amundi)</div>
+        <div class="crow"><span>Indice</span><b>SBF 120</b></div>
+        <div class="crow"><span>SFDR</span><b>Article 8 · éligible PEA</b></div>
+        <div class="crow"><span>Encours</span><b>233 M€ (30/04/2026)</b></div>
+        <div class="crow"><span>2026 (YTD)</span><b>+5,6 % · 1er des fonds France</b></div>
+        <p>Au centre de l'échiquier&nbsp;: la seule combinaison du marché entre <b>coeur de portefeuille actions françaises</b> (SBF 120, PEA, multisectoriel), <b>contrainte carbone quantitative stricte</b> (-20 % minimum, trajectoire de référence, HCIS maintenus) et <b>contribution volontaire tangible</b> (projets français Label Bas Carbone avec Carbioz). Le défi&nbsp;: démontrer durablement que le stock-picking discrétionnaire ajoute de l'alpha là où les modèles indiciels PAB restent aveugles&nbsp;; le début 2026 en est la première preuve chiffrée.</p>
+      </div>
+    </div>
+    <p class="srcline">Sources&nbsp;: recherche concurrentielle fonds climat (2026)&nbsp;: profils, encours, labels, styles et analyses&nbsp;; performances YTD&nbsp;: calculs sur les séries de VL au 13-16/07/2026&nbsp;; CPR&nbsp;: pitchbook (avril 2026). Les gérants cités par l'étude pour le fonds CPR (N. Johnson, C. Collet) correspondent à la stratégie antérieure au 30/01/2026&nbsp;; la gestion actuelle est assurée par A. Blein et G. de La Morlais (pitchbook).</p>
+  </div>
+</section>
+
+<!-- ETF -->
+<section class="alt" id="etf">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">04 · L'alternative passive</div>
+      <h2>Trois ETF climatiques face à la gestion active</h2>
+      <p>Les ETF constituent la vraie pression concurrentielle sur les frais. Les connaître permet de positionner le fonds sur ce qu'un algorithme ne fait pas.</p>
+    </div>
+    <div class="grid3">
+      <div class="comp-card">
+        <div class="ctag">ETF · réplication physique</div>
+        <h3>Amundi CAC 40 ESG</h3>
+        <div class="isin">LU1681046931 · Amundi ETF</div>
+        <div class="crow"><span>Indice</span><b>CAC 40 ESG NTR</b></div>
+        <div class="crow"><span>Encours</span><b>~828 M€</b></div>
+        <div class="crow"><span>Frais</span><b>0,25 %</b></div>
+        <div class="crow"><span>2026 (YTD)</span><b>+3,0 %</b></div>
+        <p>Le mastodonte de la gestion passive ESG française&nbsp;: 40 valeurs sélectionnées dans le CAC Large 60 pour leurs pratiques ESG, exclusions de base (charbon, armes controversées). Article 8, domicilié au Luxembourg, capitalisant. Zéro alpha par construction&nbsp;: il subit les rééquilibrages trimestriels de l'indice.</p>
+      </div>
+      <div class="comp-card">
+        <div class="ctag">ETF · réplication physique</div>
+        <h3>BNPP Easy CAC 40 ESG</h3>
+        <div class="isin">FR0010150458 · BNP Paribas AM</div>
+        <div class="crow"><span>Indice</span><b>CAC 40 ESG</b></div>
+        <div class="crow"><span>Encours</span><b>~213 M€</b></div>
+        <div class="crow"><span>Frais</span><b>0,25 %</b></div>
+        <div class="crow"><span>2026 (YTD)</span><b>+3,3 %</b></div>
+        <p>Structure identique à l'ETF Amundi, mais domicilié en France et distribuant&nbsp;: il répond aux contraintes fiscales et comptables spécifiques de certains institutionnels et caisses de retraite français. Illustre la commoditisation de l'intégration ESG de premier niveau sur les grandes capitalisations.</p>
+      </div>
+      <div class="comp-card">
+        <div class="ctag">ETF · aligné Paris (PAB)</div>
+        <h3>BNPP Easy Low Carbon 100 Europe PAB</h3>
+        <div class="isin">LU1377382368 · BNP Paribas AM</div>
+        <div class="crow"><span>Indice</span><b>Low Carbon 100 Europe PAB</b></div>
+        <div class="crow"><span>Encours</span><b>~450 M€</b></div>
+        <div class="crow"><span>Frais</span><b>0,30 %</b></div>
+        <div class="crow"><span>2026 (YTD)</span><b>+9,5 % (univers Europe)</b></div>
+        <p>Le concurrent passif le plus sophistiqué&nbsp;: indice PAB (réduction immédiate de 50 % de l'intensité GES, puis -7 % par an, scopes 1, 2 et 3), surpondération des objectifs SBTi validés, maintien des secteurs à fort impact. Mais paneuropéen (non PEA-centré France) et exposé à la rigidité algorithmique&nbsp;: si les émissions réelles ne baissent pas de 7 % par an, l'indice vend l'industrie pour acheter la tech, au risque de violer sa propre règle HCIS.</p>
+      </div>
+    </div>
+    <p class="srcline">Sources&nbsp;: recherche concurrentielle fonds climat (2026)&nbsp;: caractéristiques, encours, frais et analyse des mécaniques indicielles&nbsp;; performances YTD&nbsp;: calculs sur les exports de VL fournis au 15-16/07/2026.</p>
+  </div>
+</section>
+
+<!-- INSIGHTS -->
+<section id="insights">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">05 · Lectures transversales</div>
+      <h2>Quatre dynamiques de fond à maîtriser</h2>
+      <p>Les implications de second et troisième ordre de l'étude concurrentielle&nbsp;: ce qui différencie un discours commercial expert d'une simple lecture des performances.</p>
+    </div>
+    <div class="grid2">
+      <div class="card">
+        <h3>1 · Concentration de la cote et piège de la tracking error</h3>
+        <p style="margin-top:8px">Le marché français est dominé par une poignée de méga-capitalisations (LVMH, Hermès, Schneider Electric, L'Oréal, Sanofi, TotalEnergies). Sous-pondérer TotalEnergies pour raison climatique crée mécaniquement de la tracking error&nbsp;: les fonds climat sous-performent quand le pétrole flambe (2022) et surperforment quand la transition énergétique et le luxe tirent le marché. Tout portefeuille climat français est structurellement biaisé qualité-croissance&nbsp;; un fonds value comme Tocqueville sert précisément de couverture de style.</p>
+      </div>
+      <div class="card">
+        <h3>2 · La «&nbsp;dictature&nbsp;» du PAB face à l'engagement actif</h3>
+        <p style="margin-top:8px">Les indices PAB imposent une décarbonation comptable de 7 % par an, aveugle aux réalités industrielles&nbsp;: en cas d'échec collectif une année (ex.&nbsp;: recours accru au charbon), l'algorithme vend l'industrie pour acheter la tech et se déconnecte de l'économie réelle. La gestion active peut au contraire accompagner les acteurs «&nbsp;brown-to-green&nbsp;», véritables moteurs de la décarbonation. Le choix fonds actif contre ETF PAB n'est pas qu'une question de frais&nbsp;: c'est un choix philosophique sur l'allocation du capital.</p>
+      </div>
+      <div class="card">
+        <h3>3 · L'érosion de la prime ESG et la quête d'un nouvel alpha</h3>
+        <p style="margin-top:8px">Les grands fonds ESG français utilisent des filtres de plus en plus similaires (exclusion des 20 % les moins bien notés, charbon, armes controversées)&nbsp;: les portefeuilles s'homogénéisent autour des mêmes «&nbsp;champions&nbsp;» (Schneider Electric, Kering, Danone, Michelin) et la prime de valorisation ESG s'érode à mesure qu'elle devient la norme. Les gérants qui se distingueront iront chercher l'alpha hors des sentiers battus&nbsp;: mid-caps moins couvertes, stratégies différenciantes.</p>
+      </div>
+      <div class="card">
+        <h3>4 · Le piège des indices «&nbsp;decrement&nbsp;» en assurance-vie</h3>
+        <p style="margin-top:8px">La thématique climat est aussi «&nbsp;marchandisée&nbsp;» via des produits structurés adossés à des indices decrement (ex.&nbsp;: MSCI France Climate Select 40 PAB 5% Decrement), qui retranchent un dividende synthétique fixe (5 % ou 3,75 % par an) indépendamment des dividendes réels&nbsp;: en marché baissier, ce prélèvement aggrave mécaniquement la chute. Un OPCVM classique comme le fonds CPR capitalise ou distribue les dividendes réels, sans prélèvement synthétique&nbsp;: argument fort pour la détention longue.</p>
+      </div>
+    </div>
+    <p class="srcline">Source&nbsp;: recherche concurrentielle fonds climat (2026), «&nbsp;Implications de second et troisième ordre&nbsp;» (analyse indépendante fournie). Les valeurs citées le sont à titre d'illustration.</p>
+  </div>
+</section>
+
+<!-- RECO PAR PROFIL -->
+<section class="alt" id="reco">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">06 · Argumentaire</div>
+      <h2>Quel véhicule pour quel client&nbsp;?</h2>
+      <p>La grille de lecture de l'étude, convertie en réponse commerciale.</p>
+    </div>
+    <div class="grid3">
+      <div class="card">
+        <h3>Priorité aux coûts</h3>
+        <p style="margin-top:8px">Pour saturer le coeur d'un portefeuille au moindre coût, les ETF (0,25-0,30 %) sont imbattables sur les frais. <b>Réponse CPR&nbsp;:</b> l'écart de frais s'est autofinancé en 2026 (+5,6 % contre +3,0-3,3 % pour les ETF CAC 40 ESG), et l'ETF n'offre ni trajectoire carbone contractuelle, ni contribution Carbioz, ni discernement dans les chocs (dissolution 2024&nbsp;: fonds -3,9 % contre -6,9 % pour le marché).</p>
+      </div>
+      <div class="card">
+        <h3>Institutionnel exigeant</h3>
+        <p style="margin-top:8px">Amundi Actions France Responsable et LBPAM offrent profondeur de liquidité et engagement actionnarial lourd. <b>Réponse CPR&nbsp;:</b> même infrastructure de notation (groupe Amundi), mais avec la contrainte carbone quantitative la plus stricte de la catégorie (-20 % minimum, -44 % constaté) et un reporting climat dédié&nbsp;: l'outil le plus démonstrable en comité ESG.</p>
+      </div>
+      <div class="card">
+        <h3>Recherche d'impact tangible</h3>
+        <p style="margin-top:8px">Ofi (solidaire) et Sycomore (éco-solutions, article 9) maximisent l'impact déclaré, au prix de biais forts. <b>Réponse CPR&nbsp;:</b> l'impact du fonds est doublement concret&nbsp;: décarbonation mesurée du portefeuille et financement traçable de projets agricoles et forestiers français (Label Bas Carbone de l'État), sans sacrifier le profil coeur de portefeuille PEA.</p>
+      </div>
+    </div>
+    <p class="srcline">Source&nbsp;: recommandations finales de la recherche concurrentielle fonds climat (2026), adaptées&nbsp;; chiffres&nbsp;: calculs sur VL publiques (2026) et pitchbook (avril 2026).</p>
+  </div>
+</section>
+
+<!-- NEXT -->
+<section id="suite">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:16px"><h2 style="font-size:22px">Poursuivre la lecture</h2></div>
+    <div class="nextnav">
+      <a href="index.html"><div class="nl">Retour</div><div class="nt">Le fonds &amp; la courbe de VL</div></a>
+      <a href="portefeuille.html"><div class="nl">Aller à</div><div class="nt">Portefeuille &amp; performance</div></a>
+      <a href="strategie.html"><div class="nl">Aller à</div><div class="nt">Stratégie &amp; processus</div></a>
+      <a href="nouveautes.html"><div class="nl">Aller à</div><div class="nt">Nouveautés</div></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>CPR Asset Management</h4>
+        <p>91-93, boulevard Pasteur · 75015 Paris<br>Groupe Amundi · SGP agréée par l'AMF n° GP01-056.</p>
+        <p style="margin-top:10px"><a href="https://cpram.com/fra/fr/particuliers/products/FR0013429974">Fiche produit officielle &amp; documentation →</a></p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <nav>
+          <a href="index.html">Le fonds</a>
+          <a href="portefeuille.html">Portefeuille &amp; performance</a>
+          <a href="nouveautes.html">Nouveautés</a>
+          <a href="theme.html">Le thème</a>
+          <a href="enjeux.html">Enjeux climat</a>
+          <a href="strategie.html">Stratégie &amp; processus</a>
+          <a href="concurrence.html">Concurrence</a>
+        </nav>
+      </div>
+      <div>
+        <h4>Sources</h4>
+        <p>Recherche concurrentielle fonds climat (2026), exports de VL fournis, données publiques Boursorama (13-16/07/2026), pitchbook CPR Actions France Climat (avril 2026), documents officiels des fonds cités.</p>
+      </div>
+    </div>
+    <p class="disc">Document de travail à usage interne. Les fonds concurrents sont cités à des fins de comparaison professionnelle&nbsp;; les données les concernant proviennent de l'étude fournie et de sources publiques, à leurs dates respectives, sans garantie d'exhaustivité. Les parts comparées diffèrent selon les fonds. Les performances passées ne préjugent pas des performances futures. Avant toute décision, se référer aux documents légaux de chaque fonds.</p>
+  </div>
+</footer>
+
+<script>
+window.CHART_CONFIG = {
+  present: {cpram:true, sbf:true, amundiresp:true, lbpam:true, tocqueville:true, ofi:true, amundietf:false, bnpcac:false, bnplc:false},
+  events: false, episodes: false, fundArea: false,
+  ranges: ["hist","3a","1a","ytd","6m"], defaultRange: "hist"
+};
+</script>
+<script src="data.js?v=20260717"></script>
+<script src="chart.js?v=20260717"></script>
+<script>
+/* Entree "slide" lorsqu'on arrive depuis le bouton du graphique d'accueil */
+(function(){
+  var fromChart=false;
+  try{ fromChart=sessionStorage.getItem("slideFromChart")==="1"; sessionStorage.removeItem("slideFromChart"); }catch(_){}
+  if(fromChart || location.hash==="#graphique"){
+    document.body.classList.add("slide-in");
+    var g=document.getElementById("graphique");
+    if(g){ setTimeout(function(){ g.scrollIntoView({behavior:"smooth",block:"start"}); }, 70); }
+  }
+})();
+</script>
+</body>
+</html>

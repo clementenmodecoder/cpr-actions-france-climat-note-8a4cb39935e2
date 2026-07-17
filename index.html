@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPR Actions France Climat | Note de référence interne</title>
+<link rel="stylesheet" href="styles.css?v=20260717">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="logobox"><img src="cpram-logo.jpg" alt="CPRAM"></span></a>
+    <nav>
+      <a href="index.html" class="active">Le fonds</a>
+      <a href="portefeuille.html">Portefeuille &amp; performance</a>
+      <a href="nouveautes.html">Nouveautés</a>
+      <a href="theme.html">Le thème</a>
+      <a href="enjeux.html">Enjeux climat</a>
+      <a href="strategie.html">Stratégie &amp; processus</a>
+      <a href="concurrence.html">Concurrence</a>
+    </nav>
+    <span class="badge-int">Usage interne</span>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Note de référence pour l'équipe commerciale</div>
+    <h1>CPR Actions France Climat</h1>
+    <p class="lead">«&nbsp;Investir, c'est aussi agir.&nbsp;» Support de maîtrise du fonds à l'usage de l'équipe commerciale&nbsp;: thème de la transition climatique, processus de gestion climat propriétaire, composition, performance et lecture événementielle du parcours de la valeur liquidative. Le contenu est issu des supports officiels CPRAM (pitchbook, brochure, DIC PRIIPs, rapport climat) et de données publiques systématiquement sourcées. Chaque mouvement notable de la VL est rattaché à un fait documenté.</p>
+    <div class="meta">
+      <span>Parts&nbsp;: <b>P (C) FR0013429974</b> · <b>I FR0011354638</b></span>
+      <span>Indice&nbsp;: <b>SBF 120</b></span>
+      <span>Gérants&nbsp;: <b>A. Blein &amp; G. de La Morlais</b></span>
+      <span>SFDR&nbsp;: <b>Article 8</b></span>
+      <span>Éligible <b>PEA</b></span>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi"><div class="lab">Valeur liquidative</div><div class="val">156,74 €</div><div class="sub">part P (C) · au 13/07/2026</div></div>
+      <div class="kpi"><div class="lab">Performance 2026 (YTD)</div><div class="val pos">+5,6 %</div><div class="sub">SBF 120 (prix) +2,8 % · écart +2,8 pts</div></div>
+      <div class="kpi"><div class="lab">Encours du fonds</div><div class="val">233 M€</div><div class="sub">au 30/04/2026 · gamme climat CPRAM 8,4 Md€</div></div>
+      <div class="kpi"><div class="lab">Indice de risque</div><div class="val">4 / 7</div><div class="sub">risque moyen · horizon 5 ans min.</div></div>
+    </div>
+    <p class="disc-mini">Communication à usage interne. Données&nbsp;: pitchbook CPRAM (avril 2026, chiffres au 30/04/2026), brochure retail (30/01/2026), rapport climat (31/05/2026), DIC PRIIPs&nbsp;; VL publiques Boursorama au 13/07/2026. Date de création du FCP&nbsp;: 26/03/2013&nbsp;; nouvelle stratégie Climat effective au 30/01/2026. Les performances passées ne préjugent pas des performances futures.</p>
+  </div>
+</div>
+
+<!-- GRAPHIQUE INTEGRE -->
+<section id="parcours">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">01 · Parcours de la valeur liquidative</div>
+      <h2>La VL depuis 2018, expliquée</h2>
+      <p>Valeur liquidative réelle du fonds (indexée en base 100), comparée au SBF 120. Les points numérotés rattachent chaque phase du parcours à un fait documenté (marché, gestion). Survoler un repère pour un aperçu, cliquer pour le détail complet et les sources. Le repère n°9 marque le passage à la stratégie Climat (30/01/2026).</p>
+    </div>
+
+    <div class="panel">
+      <div class="ctrls">
+        <div class="ctrl-group">
+          <div class="glab">Période</div>
+          <div class="btnrow" id="rangeBtns"></div>
+        </div>
+        <div class="ctrl-group">
+          <div class="glab">Zoom sur un épisode</div>
+          <div class="btnrow" id="epBtns"></div>
+        </div>
+      </div>
+
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;margin-top:16px">
+        <div class="ctrl-group">
+          <div class="glab">Courbes (cliquer pour afficher / masquer)</div>
+          <div class="btnrow" id="seriesBtns"></div>
+        </div>
+        <a class="seemore" id="goCompetition" href="concurrence.html#graphique">Voir la concurrence <span class="ar">&rarr;</span></a>
+      </div>
+
+      <div class="chartwrap">
+        <svg id="chart" xmlns="http://www.w3.org/2000/svg"></svg>
+        <div class="tip" id="tip"></div>
+        <div class="evttip" id="evtTip"></div>
+      </div>
+
+      <div class="livelegend" id="liveLegend" style="margin-top:14px"></div>
+
+      <div class="chart-foot">
+        <div class="base" id="baseNote"></div>
+        <div class="hint">Molette&nbsp;: zoom &nbsp;·&nbsp; glisser&nbsp;: déplacer &nbsp;·&nbsp; double-clic&nbsp;: réinitialiser</div>
+      </div>
+      <div class="chart-foot" style="padding-top:0">
+        <div class="hint">Repères&nbsp;: <span style="color:#001C4B;font-weight:700">Macro / marché</span> · <span style="color:#0082b8;font-weight:700">Thème / secteur</span> · <span style="color:#9a6a00;font-weight:700">Gestion / fonds</span>. Cliquer un numéro pour le détail et les sources.</div>
+      </div>
+    </div>
+    <p class="srcline">Courbe du fonds&nbsp;: VL quotidienne publique de la part I (FR0011354638) du 24/09/2018 au 11/02/2026, prolongée par la part P (C) (FR0013429974) rebasée à la date de jonction, la diffusion publique de la part I étant interrompue depuis le changement de nom du fonds&nbsp;; source Boursorama, au 13/07/2026. SBF 120&nbsp;: indice prix (hors dividendes), source Boursorama&nbsp;; l'indice de référence officiel du fonds est le SBF 120 dividendes nets réinvestis. VL indexée en base 100 à l'ouverture de la fenêtre affichée, nette de frais. Avant le 30/01/2026, l'historique correspond aux stratégies antérieures du FCP (Select puis ESG).</p>
+  </div>
+</section>
+
+<!-- EN BREF -->
+<section class="alt" id="enbref">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">02 · L'essentiel</div>
+      <h2>Le fonds en bref</h2>
+      <p>CPR Actions France Climat est un fonds d'actions françaises multisectoriel (hors énergie fossile), géré activement, qui sélectionne les entreprises les plus engagées dans la transition bas carbone et s'inscrit dans une trajectoire de décarbonation mesurable. Il est éligible au PEA.</p>
+    </div>
+
+    <div class="grid3">
+      <div class="card">
+        <div class="dimhead"><div class="dimnum" style="background:var(--navy)">A</div><h3>Pourquoi ce fonds&nbsp;?</h3></div>
+        <p><b>Un fonds actions françaises</b> (min. 80 % du portefeuille) intégrant une approche de réduction de l'intensité carbone et une sélection active des entreprises les plus engagées dans la transition bas carbone.</p>
+        <p><b>Un mécanisme distinctif de contribution volontaire</b>&nbsp;: financement de projets agricoles et forestiers français labellisés Bas Carbone, à hauteur de 0,50 % des frais de gestion financière.</p>
+      </div>
+      <div class="card">
+        <div class="dimhead"><div class="dimnum" style="background:var(--cyan)">B</div><h3>Pourquoi maintenant&nbsp;?</h3></div>
+        <p><b>Une accélération de la transition</b> vers une économie bas carbone partout dans le monde, et notamment en France&nbsp;: des plans de soutien ambitieux et sans précédent (Green Deal &gt;1&nbsp;000 Md€, REPowerEU &gt;300 Md€, France 2030 54 Md€).</p>
+        <p><b>Face aux risques climatiques et réglementaires</b>, les entreprises ayant les meilleures pratiques devraient être les mieux positionnées pour l'avenir.</p>
+      </div>
+      <div class="card">
+        <div class="dimhead"><div class="dimnum" style="background:#5a6b85">C</div><h3>Pourquoi CPRAM&nbsp;?</h3></div>
+        <p><b>Une expertise climat reconnue</b>&nbsp;: une équipe dédiée aux enjeux climatiques depuis 2018 et environ 8,4 Md€ d'encours sous gestion dans la gamme climat et biodiversité (au 31/03/2026).</p>
+        <p><b>Adossé au groupe Amundi</b>&nbsp;: 95 Md€ d'actifs gérés par CPRAM, 36 gérants d'une expérience moyenne supérieure à 15 ans, et la recherche ESG d'Amundi (~50 analystes).</p>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:22px">
+      <p><b>Objectif d'investissement</b>&nbsp;: surperformer le marché des actions françaises sur le long terme, représenté par l'indice SBF 120 (horizon minimum cinq ans), en cherchant à bénéficier de la performance potentielle des entreprises françaises tout en s'inscrivant dans une trajectoire de décarbonation.</p>
+    </div>
+    <p class="srcline">Source&nbsp;: pitchbook CPR Actions France Climat (avril 2026), sections «&nbsp;Pourquoi ce fonds / maintenant / CPRAM&nbsp;»&nbsp;; objectif d'investissement et plans de soutien&nbsp;: brochure retail (30/01/2026) et pitchbook (Green Deal, REPowerEU, France 2030).</p>
+  </div>
+</section>
+
+<!-- CARTE D'IDENTITE + RISQUE + FRAIS -->
+<section id="carte">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">03 · Carte d'identité</div>
+      <h2>Caractéristiques &amp; coûts</h2>
+      <p>Repères à connaître pour le dossier. En cas d'écart, les documents légaux (Prospectus, DIC PRIIPs) et la fiche produit officielle font foi.</p>
+    </div>
+
+    <div class="grid2">
+      <div class="card">
+        <h3>Carte d'identité</h3>
+        <table class="idtable" style="margin-top:8px">
+          <tr><td>Code ISIN (part P C)</td><td>FR0013429974</td></tr>
+          <tr><td>Code ISIN (part I)</td><td>FR0011354638</td></tr>
+          <tr><td>Date de création du FCP</td><td>26/03/2013</td></tr>
+          <tr><td>Nouvelle stratégie Climat</td><td>30/01/2026</td></tr>
+          <tr><td>Forme juridique</td><td>FCP de droit français · OPCVM</td></tr>
+          <tr><td>Société de gestion</td><td>CPR Asset Management (groupe Amundi)</td></tr>
+          <tr><td>Devise de la part</td><td>EUR · capitalisation (part P C)</td></tr>
+          <tr><td>Indice de référence</td><td>SBF 120</td></tr>
+          <tr><td>Classification SFDR</td><td>Article 8</td></tr>
+          <tr><td>Actions françaises</td><td>minimum 80 % du portefeuille</td></tr>
+          <tr><td>Éligibilité PEA</td><td>Oui</td></tr>
+          <tr><td>Valorisation</td><td class="lng">Quotidienne · heure limite de réception des ordres 12h25</td></tr>
+          <tr><td>Horizon recommandé</td><td>Supérieur à 5 ans</td></tr>
+        </table>
+        <p class="srcline">Source&nbsp;: brochure retail CPR Actions France Climat (caractéristiques au 30/01/2026) et pitchbook (avril 2026), carte d'identité.</p>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:22px">
+        <div class="card">
+          <h3>Indicateur de risque (PRIIPs)</h3>
+          <div class="ph">Échelle de 1 (plus faible) à 7 (plus élevé)</div>
+          <div class="risk">
+            <div class="rb">1</div><div class="rb">2</div><div class="rb">3</div>
+            <div class="rb on">4</div><div class="rb">5</div><div class="rb">6</div><div class="rb">7</div>
+          </div>
+          <p style="font-size:13px;color:var(--muted);margin:10px 0 0">Classe de risque <b>moyenne</b> (4/7). Le fonds présente un risque de perte en capital&nbsp;; il ne prévoit aucune protection contre les aléas de marché. Risques principaux&nbsp;: perte en capital, actions, gestion discrétionnaire, surexposition, durabilité, performance par rapport à un indice.</p>
+          <p class="srcline">Source&nbsp;: DIC PRIIPs et brochure retail CPR Actions France Climat (indicateur synthétique de risque)&nbsp;; liste des risques&nbsp;: pitchbook (avril 2026).</p>
+        </div>
+        <div class="card">
+          <h3>Coûts (part P, DIC PRIIPs)</h3>
+          <table class="idtable" style="margin-top:4px">
+            <tr><td>Frais de gestion &amp; coûts administratifs</td><td>0,60 % / an</td></tr>
+            <tr><td>Coûts de transaction</td><td>0,04 % / an</td></tr>
+            <tr><td>Commission de surperformance</td><td class="lng">15 % de la surperformance annuelle au-delà de 100 % SBF 120 NR Close</td></tr>
+            <tr><td>Coûts d'entrée (max.)</td><td>jusqu'à 2,50 %</td></tr>
+            <tr><td>Coûts de sortie</td><td>néant</td></tr>
+          </table>
+          <p class="note" style="margin-top:10px">Les sous-performances passées sur cinq ans doivent être compensées avant toute nouvelle comptabilisation de la commission de surperformance. Celle-ci peut être perçue même si la performance absolue de la part est négative, dès lors qu'elle dépasse celle de l'indice.</p>
+          <p class="srcline">Source&nbsp;: DIC PRIIPs reproduit dans le pitchbook CPR Actions France Climat (avril 2026), composition des coûts.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RAISONS D'INVESTIR -->
+<section class="alt" id="raisons">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">04 · Arguments clés</div>
+      <h2>Cinq raisons d'investir</h2>
+      <p>Synthèse des arguments structurants tels que présentés dans les supports officiels CPR Actions France Climat.</p>
+    </div>
+    <div class="reasons">
+      <div class="reason"><div class="rn">1</div><div><h4>Une thématique centrale du XXIe siècle</h4><p>La transition climatique s'impose comme un enjeu prioritaire&nbsp;: accord de Paris, réglementation durcie, plans de financement massifs (Green Deal, REPowerEU, France 2030) et demande croissante de solutions bas carbone.</p></div></div>
+      <div class="reason"><div class="rn">2</div><div><h4>Des entreprises françaises parmi les plus avancées</h4><p>Selon les données CDP / SBTi, les entreprises françaises figurent parmi les plus avancées au monde en matière d'ambitions climatiques&nbsp;: un terrain de sélection favorable pour une gestion exigeante.</p></div></div>
+      <div class="reason"><div class="rn">3</div><div><h4>Une méthodologie climat propriétaire et mesurable</h4><p>Intensité carbone inférieure d'au moins 20 % à celle du SBF 120 à tout moment, trajectoire de décarbonation de référence (-30 % puis -7 % par an depuis fin 2019) et priorité aux secteurs à fort impact.</p></div></div>
+      <div class="reason"><div class="rn">4</div><div><h4>Un mécanisme de contribution volontaire unique</h4><p>0,50 % des frais de gestion financière finance des projets agricoles et forestiers français labellisés Bas Carbone (partenariat Carbioz)&nbsp;: environ 23 projets et 19&nbsp;000 tonnes de CO2 compensées estimés en 2026.</p></div></div>
+      <div class="reason"><div class="rn">5</div><div><h4>Une gestion active de conviction, multisectorielle</h4><p>Portefeuille de conviction éligible au PEA, diversifié sur tous les secteurs (hors énergie fossile), avec une volatilité proche de celle du marché&nbsp;; double due diligence financière (EVA, analyse factorielle) et extra-financière.</p></div></div>
+    </div>
+    <p class="srcline">Source&nbsp;: pitchbook CPR Actions France Climat (avril 2026)&nbsp;; brochure retail (30/01/2026)&nbsp;; estimation Carbioz 2026&nbsp;: pitchbook, sur la base d'un encours de 250 M€ (au 20/01/2026).</p>
+  </div>
+</section>
+
+<!-- EQUIPE -->
+<section id="equipe">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">05 · Équipe de gestion</div>
+      <h2>Qui gère le fonds</h2>
+      <p>Le fonds est géré au sein du pôle PLANET (défis environnementaux et sociaux) de l'équipe Actions thématiques de CPRAM, par Alexandre Blein et Gaël de La Morlais.</p>
+    </div>
+    <div class="grid2">
+      <div class="card">
+        <h3>Alexandre Blein</h3>
+        <div class="ph">Responsable adjoint du département Actions thématiques · Responsable du pôle PLANET · SFAF</div>
+        <p>Rejoint l'équipe Actions thématiques de CPRAM en 2018&nbsp;; il gère la thématique Action Climat depuis son lancement et supervise les solutions de transition énergétique. Il prend la responsabilité du pôle Planet en janvier 2022. Débuts en 1998 comme analyste financier chez BFT IM, puis gérant actions européennes chez CPRAM (2000), actions nord-américaines chez CAAM (2002) et actions internationales chez Amundi London (2010). Maîtrise Banque et Finance (Lyon II), Mastère en Ingénierie Financière (ESCEM), membre diplômé de la SFAF.</p>
+      </div>
+      <div class="card">
+        <h3>Gaël de La Morlais</h3>
+        <div class="ph">Gérant Actions thématiques · membre du pôle PLANET · CIIA, CESGA</div>
+        <p>Rejoint l'équipe Actions thématiques de CPRAM en février 2023&nbsp;; il gère des thématiques en faveur de la transition énergétique (économie circulaire et hydrogène). Carrière débutée en 1998 chez Indosuez Cheuvreux de Virieu, puis gérant actions européennes chez CAI Cheuvreux Gestion (1999) et Indosuez Gestion (2000). Maîtrise d'économétrie et DESS de techniques statistiques (Paris II Assas)&nbsp;; titulaire du CIIA (2002) et du CESGA (2022, SFAF).</p>
+      </div>
+    </div>
+    <p class="srcline">Source&nbsp;: pitchbook CPR Actions France Climat (avril 2026), équipe de gestion. Rien ne garantit que les professionnels actuellement employés par CPRAM continueront à l'être&nbsp;; les performances ou succès passés ne préjugent pas des résultats futurs.</p>
+  </div>
+</section>
+
+<!-- NEXT -->
+<section class="alt" id="suite">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:16px"><h2 style="font-size:22px">Poursuivre la lecture</h2></div>
+    <div class="nextnav">
+      <a href="portefeuille.html"><div class="nl">Page suivante</div><div class="nt">Portefeuille &amp; performance</div></a>
+      <a href="nouveautes.html"><div class="nl">Aller à</div><div class="nt">Nouveautés</div></a>
+      <a href="strategie.html"><div class="nl">Aller à</div><div class="nt">Stratégie &amp; processus</div></a>
+      <a href="concurrence.html"><div class="nl">Aller à</div><div class="nt">Concurrence</div></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>CPR Asset Management</h4>
+        <p>91-93, boulevard Pasteur · 75015 Paris<br>Groupe Amundi · SGP agréée par l'AMF n° GP01-056.</p>
+        <p style="margin-top:10px"><a href="https://cpram.com/fra/fr/particuliers/products/FR0013429974">Fiche produit officielle &amp; documentation →</a></p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <nav>
+          <a href="index.html">Le fonds</a>
+          <a href="portefeuille.html">Portefeuille &amp; performance</a>
+          <a href="nouveautes.html">Nouveautés</a>
+          <a href="theme.html">Le thème</a>
+          <a href="enjeux.html">Enjeux climat</a>
+          <a href="strategie.html">Stratégie &amp; processus</a>
+          <a href="concurrence.html">Concurrence</a>
+        </nav>
+      </div>
+      <div>
+        <h4>Sources</h4>
+        <p>Pitchbook CPR Actions France Climat (avril 2026), brochure retail (30/01/2026), rapport climat (31/05/2026), DIC PRIIPs, recherche concurrentielle fonds climat (2026), exports de VL fournis et données publiques Boursorama (au 13-16/07/2026), articles de presse cités.</p>
+      </div>
+    </div>
+    <p class="disc">Document de travail à usage interne. Il est fourni à titre d'information et ne constitue ni un conseil en investissement, ni une recommandation, ni une sollicitation d'achat ou de vente. Le fonds présente un risque de perte en capital&nbsp;; sa valeur liquidative peut fluctuer à la hausse comme à la baisse et le capital investi n'est pas garanti. Risques notables&nbsp;: actions / marché, gestion discrétionnaire, surexposition, liquidité, durabilité. Les performances passées ne préjugent pas des performances futures et ne sont pas constantes dans le temps. Avant toute décision, se référer au Prospectus et au DIC PRIIPs disponibles sur cpram.com. En cas d'écart, les documents légaux et la fiche produit officielle font foi.</p>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-bg" id="modalBg"></div>
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <div class="mtop">
+    <button class="mclose" id="modalClose" aria-label="Fermer">✕</button>
+    <div class="mdt" id="mDate"></div>
+    <h3 id="mTitle"></h3>
+  </div>
+  <div class="mbody" id="mBody"></div>
+  <div class="impact" id="mImpact"></div>
+  <div class="sources" id="mSources"></div>
+</div>
+
+<script>
+window.CHART_CONFIG = {
+  present: {cpram:true, sbf:true},
+  events: true, episodes: true, fundArea: true,
+  ranges: ["hist","3a","1a","ytd"], defaultRange: "hist"
+};
+</script>
+<script src="data.js?v=20260717"></script>
+<script src="chart.js?v=20260717"></script>
+<script>
+/* Transition "slide" vers la page Concurrence */
+(function(){
+  var btn=document.getElementById("goCompetition");
+  if(!btn) return;
+  btn.addEventListener("click",function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.button===1) return;
+    e.preventDefault();
+    var href=btn.getAttribute("href");
+    try{ sessionStorage.setItem("slideFromChart","1"); }catch(_){}
+    document.body.classList.add("slide-out");
+    setTimeout(function(){ window.location.href=href; }, 320);
+  });
+})();
+</script>
+</body>
+</html>
