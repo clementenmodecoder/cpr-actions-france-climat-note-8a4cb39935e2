@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Concurrence | CPR Actions France Climat</title>
-<link rel="stylesheet" href="styles.css?v=20260719">
+<link rel="stylesheet" href="styles.css?v=20260721">
 </head>
 <body>
 
@@ -66,7 +66,7 @@
         <div class="hint">Molette&nbsp;: zoom &nbsp;·&nbsp; glisser&nbsp;: déplacer &nbsp;·&nbsp; double-clic&nbsp;: réinitialiser</div>
       </div>
     </div>
-    <p class="srcline">Sources&nbsp;: exports de VL fournis (ETF BNPP et Amundi, Tocqueville France I, Ofi Invest Sélection Actions France I, Amundi Actions France Responsable I, au 13-16/07/2026) export VL CPRAM pour la part I du fonds CPR (jusqu'au 11/02/2026) et données publiques Boursorama (extension part P C, LBPAM Actions France C, SBF 120 prix). Courbe CPR&nbsp;: part I prolongée par la part P (C) rebasée après le 11/02/2026. Les parts diffèrent selon les fonds (I, C, GP)&nbsp;: les niveaux de frais ne sont donc pas strictement homogènes entre courbes. Performances nettes, dividendes le cas échéant non réinvestis pour les parts de distribution.</p>
+    <p class="srcline">Sources&nbsp;: exports de VL fournis (ETF BNPP et Amundi, Tocqueville France I, Ofi Invest Sélection Actions France I, Amundi Actions France Responsable I, au 13-16/07/2026) export VL CPRAM pour la part I du fonds CPR (jusqu'au 11/02/2026), données publiques Boursorama (extension part P C, LBPAM Actions France C) et Euronext (SBF 120 NR, indice officiel dividendes nets réinvestis). Courbe CPR&nbsp;: part I prolongée par la part P (C) rebasée après le 11/02/2026. Les parts diffèrent selon les fonds (I, C, GP)&nbsp;: les niveaux de frais ne sont donc pas strictement homogènes entre courbes. Performances nettes, dividendes le cas échéant non réinvestis pour les parts de distribution.</p>
   </div>
 </section>
 
@@ -112,6 +112,12 @@
             <td class="num pos">+5,5 %</td><td class="num">+8,1 %</td><td class="num">14,6 %</td>
           </tr>
           <tr>
+            <td>SBF 120 NR <small>(indice de référence, dividendes réinvestis)</small></td>
+            <td>Indice de réf.</td><td>s.o.</td>
+            <td class="num">s.o.</td><td class="num">s.o.</td>
+            <td class="num">+4,8 %</td><td class="num">+10,6 %</td><td class="num">13,9 %</td>
+          </tr>
+          <tr>
             <td>Ofi Invest Sélection Actions France <small>(part I)</small></td>
             <td>Active · ESG</td><td>Art. 8</td>
             <td class="num">n.d.</td><td class="num">n.d.</td>
@@ -141,19 +147,13 @@
             <td class="num">~828 M€</td><td class="num">0,25 %</td>
             <td class="num pos">+3,0 %</td><td class="num">+8,9 %</td><td class="num">15,7 %</td>
           </tr>
-          <tr>
-            <td>SBF 120 <small>(indice prix)</small></td>
-            <td>Indice de réf.</td><td>s.o.</td>
-            <td class="num">s.o.</td><td class="num">s.o.</td>
-            <td class="num">+2,8 %</td><td class="num">+8,0 %</td><td class="num">13,9 %</td>
-          </tr>
         </tbody>
       </table>
-      <p class="srcline">Performances et volatilités&nbsp;: calculs homogènes sur les VL des exports fournis et des données publiques Boursorama, arrêtés au 13-16/07/2026 selon les séries&nbsp;; volatilité&nbsp;: écart-type annualisé des rendements quotidiens sur 1 an. Encours et frais&nbsp;: recherche concurrentielle fonds climat (2026)&nbsp;; CPR&nbsp;: pitchbook (30/04/2026) et DIC PRIIPs part P. n.d.&nbsp;: non disponible dans les documents fournis. Le BNPP Easy Low Carbon 100 est paneuropéen (univers différent des fonds actions françaises).</p>
+      <p class="srcline">Performances et volatilités&nbsp;: calculs homogènes sur les VL des exports fournis et des données publiques Boursorama / Euronext, arrêtés au 13-16/07/2026 selon les séries&nbsp;; volatilité&nbsp;: écart-type annualisé des rendements quotidiens sur 1 an. Encours et frais&nbsp;: recherche concurrentielle fonds climat (2026)&nbsp;; CPR&nbsp;: pitchbook (30/04/2026) et DIC PRIIPs part P. n.d.&nbsp;: non disponible dans les documents fournis. Le BNPP Easy Low Carbon 100 est paneuropéen (univers différent des fonds actions françaises).</p>
     </div>
 
     <div class="callout" style="margin-top:22px">
-      <p><b>Lecture commerciale.</b> En 2026, le fonds est <b>1er des fonds actions françaises comparés</b>, actifs comme ETF, et 2e toutes séries confondues derrière un ETF paneuropéen dont l'univers (Low Carbon 100 Europe) n'est pas comparable. Il fait environ le double de son indice (+5,6 % contre +2,8 %) tout en affichant l'engagement carbone le plus strict de la catégorie actions françaises (-20 % minimum, constaté à -44 %).</p>
+      <p><b>Lecture commerciale.</b> En 2026, le fonds est <b>1er des fonds actions françaises comparés</b>, actifs comme ETF, et 2e toutes séries confondues derrière un ETF paneuropéen dont l'univers (Low Carbon 100 Europe) n'est pas comparable. Il devance son indice officiel (+5,6 % contre +4,8 % pour le SBF 120 NR) tout en affichant l'engagement carbone le plus strict de la catégorie actions françaises (-20 % minimum, constaté à -44 %).</p>
     </div>
   </div>
 </section>
@@ -387,8 +387,8 @@ window.CHART_CONFIG = {
   ranges: ["hist","3a","1a","ytd","6m"], defaultRange: "hist"
 };
 </script>
-<script src="data.js?v=20260719"></script>
-<script src="chart.js?v=20260719"></script>
+<script src="data.js?v=20260721"></script>
+<script src="chart.js?v=20260721"></script>
 <script>
 /* Entree "slide" lorsqu'on arrive depuis le bouton du graphique d'accueil */
 (function(){
@@ -401,6 +401,6 @@ window.CHART_CONFIG = {
   }
 })();
 </script>
-<script src="site.js?v=20260719"></script>
+<script src="site.js?v=20260721"></script>
 </body>
 </html>

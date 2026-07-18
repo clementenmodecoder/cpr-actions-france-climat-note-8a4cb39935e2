@@ -216,8 +216,8 @@ section.alt{background:linear-gradient(180deg,var(--alt),#eef4fa)}
 
 .note{font-size:12.5px;color:var(--muted);margin-top:14px}
 /* petite ligne de source grise, avec asterisque, sous chaque bloc de données */
-.srcline{font-size:10.5px;color:#9aa7b8;line-height:1.55;margin-top:10px;display:block}
-.srcline:before{content:"\002A\00A0";color:#9aa7b8;font-weight:700}
+.srcline{font-size:10.5px;color:#a9b4c2;line-height:1.55;margin-top:10px;display:block;font-style:italic}
+.srcline:before{content:"\002A\00A0";color:#a9b4c2;font-weight:700}
 .card .srcline{margin-top:14px;padding-top:10px;border-top:1px dashed var(--line)}
 .srcsup{color:#9aa7b8;font-weight:700;font-size:.72em;vertical-align:super;margin-left:2px}
 .kpi .srcline{color:#7c92b4;border:none;margin-top:8px}
@@ -452,6 +452,10 @@ body.slide-in{animation:pageInRight .44s cubic-bezier(.22,.61,.36,1)}
 .exch{font-size:12.5px;padding:7px 12px;border-radius:9px;background:#fff;border:1px solid var(--line);color:var(--navy)}
 .exch.norm{background:#fdecec;border-color:#f6d2d2;color:#a23b2c}
 .exch.sect{background:var(--gray)}
+
+/* ---------- mini logos (top 10) ---------- */
+.lgcell{display:inline-flex;align-items:center;gap:9px}
+.lgcell img{width:20px;height:20px;border-radius:5px;object-fit:contain;background:#fff;border:1px solid var(--line);padding:1px;flex:0 0 auto}
 
 /* ---------- Nouveautés / actualités ---------- */
 .updated{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;color:var(--muted);background:var(--gray);border:1px solid var(--line);padding:8px 15px;border-radius:22px}
